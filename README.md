@@ -6,6 +6,6 @@ Ideia de projeto retirada do repositório: Projects/1-Beginner/Border-Radius-Pre
 
 Visite a pagina do meu projeto pronto:
 
-https://maiam.github.io/Border-Radius-AppIdeas/
+https://maiam.github.io/Border-radius-AppIdeas/
 
 Copyright Maiam 2022
