@@ -12,31 +12,33 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
+<body id="body">
     <header class="l-header">
         <h1>Border-radius Previewer</h1>
     </header>
 
     <main class="l-main">
-        <figure class="square">
+        <figure id="square" class="square">
             <div class="__controles">
                 <label for="" class="__l-top-left">
-                    <input type="text" class="__controle __top-left">
+                    <input type="text" id="top-left" class="__controle __top-left" value=0>
                     <span class="visible">top-left</span>
                 </label>
-                <label for="">
-                    <input type="text" class="__controle __top-right">
+                <label for="" class="__l-top-right">
+                    <input type="text" id="top-right" class="__controle __top-right" value=0>
                     <span class="visible">top-right</span>
                 </label>
-                <label for="">
-                    <input type="text" class="__controle __bottom-right">
+                <label for="" class="__l-bottom-right">
+                    <input type="text" id="bottom-right" class="__controle __bottom-right" value=0>
                     <span class="">bottom-right</span>
                 </label>
-                <label for="">
-                    <input type="text" class="__controle __bottom-left">    
+                <label for="" class="__l-bottom-left">
+                    <input type="text" id="bottom-left" class="__controle __bottom-left" value=0>    
                     <span class="">bottom-left</span>
                 </label>
             </div>
+            <p class="info">Unidade: px</p>
+            <!-- <input id="top" type="range" min='0' max='200'> -->
         </figure>
     </main>
 

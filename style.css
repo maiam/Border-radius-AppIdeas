@@ -56,14 +56,16 @@ input:focus {
     background-color:  #463F3A;
 }
 
-
 .square {
     position: relative;
     width: 16rem;
     height: 16rem;
     margin-top: 8rem;
     border: 10px solid #E0AFA0;
+    transition: 0.7s ease-in;
+}
 
+.border-r {
     border-radius: 1rem 1rem 1rem 1rem;
 }
 
@@ -79,7 +81,6 @@ input:focus {
     top: 18rem;
     left: 1rem;
 
-    background-color: yellowgreen;
 }
 
 .__controle {
@@ -90,7 +91,6 @@ input:focus {
 
     border: 0.2rem solid #E0AFA0;
     border-radius: 1rem;
-    background-color: violet;
 }
 
 .__controles span {
@@ -106,6 +106,17 @@ span {
     width: 2rem;
     transform: rotate(-90deg);
     display: block;
+}
+
+.info {
+     position: absolute;
+     top: 6.5rem;
+     left: 5rem;
+}
+
+.top {
+    width: 16rem;
+
 }
 
 .visible{
