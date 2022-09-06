@@ -18,29 +18,32 @@
     </header>
 
     <main class="l-main">
-        <figure id="square" class="square">
+        <div class="app">
+            <figure id="square" class="square"></figure>
             <div class="__controles">
                 <label for="" class="__l-top-left">
                     <input type="text" id="top-left" class="__controle __top-left" value=0>
-                    <span class="visible">top-left</span>
+                    <span id="span-top-left" class="visible">top-left</span>
                 </label>
                 <label for="" class="__l-top-right">
                     <input type="text" id="top-right" class="__controle __top-right" value=0>
-                    <span class="visible">top-right</span>
+                    <span id="span-top-right" class="visible">top-right</span>
                 </label>
                 <label for="" class="__l-bottom-right">
                     <input type="text" id="bottom-right" class="__controle __bottom-right" value=0>
-                    <span class="">bottom-right</span>
+                    <span id="span-bottom-right" class="visible">bottom-right</span>
                 </label>
                 <label for="" class="__l-bottom-left">
                     <input type="text" id="bottom-left" class="__controle __bottom-left" value=0>    
-                    <span class="">bottom-left</span>
+                    <span id="span-bottom-left" class="visible">bottom-left</span>
                 </label>
             </div>
-            <p class="info">Unidade: px</p>
-            <!-- <input id="top" type="range" min='0' max='200'> -->
-        </figure>
+            <div class="range-top">
+                <input id="range-bottom" class="visible" type="range" min='-250' max='250'>
+            </div>
+        </div>
     </main>
+
 
     <footer class="l-footer">
         <p>Copyright © 2022 MaiaM. Todos os direitos reservados. </p>   
