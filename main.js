@@ -1,101 +1,85 @@
-
+const spans = document.querySelectorAll('span');
+const inputs = document.querySelectorAll('input');
 const inputTopLeft = document.getElementById('top-left')
 const inputTopRight = document.getElementById('top-right')
 const inputBottomRight = document.getElementById('bottom-right')
 const inputBottomLeft = document.getElementById('bottom-left')
-const body = document.getElementById('body');
 const square = document.getElementById('square')
 const rangeBottom = document.getElementById('range-bottom');
 
-function visible (text) {
-    const span = document.getElementById(text)
-    span.classList.remove('visible');
-    setTimeout(function() {
-        span.classList.add('visible');
-      }, 3000);
-};
 
-
-
-function changeBottomLeft (valor){
-    inputBottomRight.value = 0;
-    inputBottomLeft.value = valor;
-    square.style.borderBottomLeftRadius = valor + 'px';
-    
-    visible('span-bottom-left');
-};
-
-// function range(){
-//     let valor = rangeBottom.value;
-//     if(valor > 0){
-//         changeBottomRight();
-//     } else if (valor < 0) {
-//         changeBottomLeft(-valor)
-//     }
-// }
-
-
-rangeBottom.addEventListener('change', function(){
-    let valor = rangeBottom.value;
-    
-    if(valor > 0){
-        changeBottomRight();
-    } else if (valor < 0) {
-        changeBottomLeft(-valor)
+document.body.addEventListener('click', e => {
+    if(e.target.tagName!='INPUT') {
+        limpaTooltips();
     }
+
+})
+
+inputs.forEach(element => {
+    element.addEventListener ('click', () => {    
+       limpaTooltips()
+       topLeft(element);
+       topRight(element);
+       bottomRight(element);
+       bottomLeft(element);
+       
+    })
 });
 
-inputTopLeft.addEventListener('input', function(){
-    let topLeft = inputTopLeft.value;
-    square.style.borderTopLeftRadius = topLeft + 'px';
-    
-    visible('span-top-left')
-    }, 
-false);
 
-
-inputTopRight.addEventListener('input', function(){
-    let topRight = inputTopRight.value;
-    square.style.borderTopRightRadius = topRight + 'px';
-    
-    visible('span-top-right')
-    }, 
-false);
-
-
-
-
-inputBottomLeft.addEventListener('input', function(){ 
-    let bottomLeft = inputBottomLeft.value;
-    square.style.borderBottomLeftRadius = bottomLeft + 'px';
-
-    visible('span-bottom-left')
-    }, 
-false);
-
-
-function changeBottomRight(){
-    let bottomRight = inputBottomRight.value;
-    square.style.borderBottomRightRadius = bottomRight + 'px';
-    
-    // if(!valor){
-    //     rangeBottom.value = valor;
-    // } else {
-        rangeBottom.value = bottomRight;
+function topLeft(element){
+    if(element.className.match('__top-left'))
+        toggleTooltip('span-top-left');
         
-    // }
-   
-    visible('span-bottom-right')
+}
+
+function topRight(element){
+    if(element.className.match('__top-right'))
+        toggleTooltip('span-top-right');
+        
+}
+
+function bottomRight(element){
+    if(element.className.match('__bottom-right'))
+        toggleTooltip('span-bottom-right');
+        
+}
+
+function bottomLeft(element){
+    if(element.className.match('__bottom-left'))
+        toggleTooltip('span-bottom-left');
+        
+}
+
+function limpaTooltips () {
+    spans.forEach(span => {
+
+        span.classList.add('visible');
+    })
+}
+
+function changeBorder (topLeft,topRight,bottomRight,bottomLeft) {
+
+    square.style.borderTopLeftRadius = topLeft + 'px';
+    square.style.borderTopRightRadius = topRight + 'px';
+    square.style.borderBottomRightRadius = bottomRight + 'px';
+    square.style.borderBottomLeftRadius = bottomLeft + 'px';
+}
+
+document.addEventListener('input', e => {
     
-};
+    changeBorder(
+        inputTopLeft.value,
+        inputTopRight.value,
+        inputBottomRight.value,
+        inputBottomLeft.value);
+    
+})
 
-inputBottomRight.addEventListener('input', changeBottomRight, false);
 
-// inputTopLeft.addEventListener('mouseover', function(){
-//     const span = document.getElementById('span-top-left')
-//     span.classList.remove('visible');
-//     setTimeout(function() {
-//         span.classList.add('visible');
-//       }, 1000);
-//     }, false);
+function toggleTooltip (text) {
+    const span = document.getElementById(text)
+    span.classList.toggle('visible');
+}
+
 
