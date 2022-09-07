@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    color: #463F3A;
     font-size: 16px;
     background-color: #F4F3EE;
 }
@@ -68,7 +68,9 @@ input:focus {
     height: 16rem;
     margin: 0;
     padding: 0;
-    border: 10px solid #E0AFA0;
+    border: 5px solid #463F3A;
+    background-color: #E0AFA0;
+
     
     position: absolute;
     top: 8rem;
@@ -81,17 +83,17 @@ input:focus {
 
 .__controles {
     margin: 0;
+    margin-left: 1rem;
     padding: 0;
     
     display: flex;
     align-items: center;
-    justify-items: center;
-    gap: 1.5rem;
-
-    text-align: center;
+    justify-items: start;
+    gap: 0.5rem;
 
     position: absolute;
     top: 28rem;
+    
 
 }
 
@@ -140,12 +142,6 @@ input:focus {
 
 }
 
-
-
-/* input[type=range]:focus {
-    outline: none;
-} */
-
 .__controle {
     width: 2rem;
     height: 2rem;
@@ -167,6 +163,8 @@ span {
 
 .__l-top-left {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .__l-top-left span {
@@ -200,6 +198,8 @@ span::after{
 
 .__l-top-right {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -220,6 +220,9 @@ span::after{
 
 .__l-bottom-right {
     position: relative;
+    display: flex;
+    align-items: center;
+    
 }
 
 .__l-bottom-right span{
@@ -239,6 +242,8 @@ span::after{
 
 .__l-bottom-left {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .__l-bottom-left span {
@@ -275,4 +280,19 @@ span::after{
 .fill {
     background-color: #E0AFA0;
 
+}
+
+.app p{
+    margin-left: 1rem;
+    position: absolute;
+    top: 30rem;
+    font-weight: 700;
+}
+
+.primary-text {
+    width: 70%;
+    margin: 0;
+    margin-top: 2rem;
+    padding: 0;
+    text-align: center;
 }

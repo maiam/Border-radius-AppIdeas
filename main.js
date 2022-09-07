@@ -16,7 +16,7 @@ document.body.addEventListener('click', e => {
 })
 
 inputs.forEach(element => {
-    element.addEventListener ('click', () => {    
+    element.addEventListener ('focus', () => {    
        limpaTooltips()
        topLeft(element);
        topRight(element);
