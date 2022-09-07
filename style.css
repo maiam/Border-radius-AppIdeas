@@ -39,7 +39,7 @@ input:focus {
 .l-footer {
     width: 100%;
     height: 4.375rem;
-    position: sticky;
+    position: fixed;
     bottom: 0;
 
     text-align: center;
