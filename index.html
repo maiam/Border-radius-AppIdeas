@@ -25,32 +25,35 @@
             <figure id="square" class="square fill"></figure>
             <div class="__controles">
                 <label for="" class="__l-top-left">
-                    <input type="text" id="top-left" class="__controle __top-left" value=0>px
+                    <input type="text" id="top-left" class="__controle __top-left" value=0 maxlength="3">px
                     <span id="span-top-left" class="visible">top-left</span>
                 </label>
                 <label for="" class="__l-top-right">
-                    <input type="text" id="top-right" class="__controle __top-right" value=0>px
+                    <input type="text" id="top-right" class="__controle __top-right" value=0 maxlength="3">px
                     <span id="span-top-right" class="visible">top-right</span>
                 </label>
                 <label for="" class="__l-bottom-right">
-                    <input type="text" id="bottom-right" class="__controle __bottom-right" value=0>px
+                    <input type="text" id="bottom-right" class="__controle __bottom-right" value=0 maxlength="3">px
                     <span id="span-bottom-right" class="visible">bottom-right</span>
                 </label>
                 <label for="" class="__l-bottom-left">
-                    <input type="text" id="bottom-left" class="__controle __bottom-left" value=0>px    
+                    <input type="text" id="bottom-left" class="__controle __bottom-left" value=0 maxlength="3">px    
                     <span id="span-bottom-left" class="visible">bottom-left</span>
                 </label>
+                
             </div>
-            <!-- <div class="range-top">
-                <input id="range-bottom" class="visible" type="range" min='-250' max='250'>
+            <div class="square-button">
+                <button class="reset-button">Reset</button>
             </div>
             <div class="primary-button">
-                <button class="copiar-css">Copiar CSS</button>
+                <p id="p-copy" class="p-copy visible"></p>
+                <input type="text" class="input-copy" disabled value="border-radius: 0px 0px 0px 0px">
+                <button class="btn-copy">Copiar CSS</button>
             </div>
-            <p>Altere os controles para adicionar bordas.</p> -->
         </div>
-    </main>
+        
 
+    </main>
 
     <footer class="l-footer">
         <p>Copyright © 2022 MaiaM. Todos os direitos reservados. </p>   

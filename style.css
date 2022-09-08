@@ -31,7 +31,7 @@ input:focus {
 }
 
 .l-main {
-    width: 100%;
+    width: 100%vw;
     height: 50rem;
     text-align: center;
 }
@@ -54,12 +54,13 @@ input:focus {
 
 .app {
     position: relative;
-    width: 95%;
-    height: 95%;
+    width: 95%vw;
+    height: 95%vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
 }
 
 .square {
@@ -296,3 +297,120 @@ span::after{
     text-align: center;
 }
 
+.primary-button {
+    width: 100%;
+    height: 0;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn-copy {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 8rem;
+    height: 2rem;
+    top: 26.5rem;
+    text-align: center;
+
+    background: #F4F3EE;
+    color: #463F3A;
+    border: 2px solid #463F3A;
+    border-radius: 1rem;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+
+
+}
+
+.btn-copy:active {
+    background: #463F3A;
+    color: #F4F3EE;
+    border: 2px solid #8A817C;
+    border-radius: 1rem;
+
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+    transition: 0.1s all;
+}
+
+.input-copy {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 17rem;
+    height: 1.5rem;
+    top: 24rem;
+    text-align: center;
+    color: #463F3A;
+    background: #F4F3EE;
+
+    color: #463F3A;
+    border: 2px solid #463F3A;
+    /* border-radius: 1rem; */
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.p-copy{
+    display: visible;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 3rem;
+    top: 23rem;
+    text-align: center;
+
+    font-size: 1.2rem;
+    color: #463F3A;
+}
+
+.square-button {
+    width: 100%;
+    height: 0;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+}
+
+.reset-button {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 3.3rem;
+    height: 3.3rem;
+    top: 12.5rem;
+    text-align: center;
+
+    background: #F4F3EE;
+    color: #463F3A;
+    border: 2px solid #463F3A;
+    border-radius: 5rem;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+}
+
+.reset-button:active {
+    background: #463F3A;
+    color: #F4F3EE;
+    border: 2px solid #8A817C;
+    border-radius: 5rem;
+
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+    transition: 0.1s all;
+}
