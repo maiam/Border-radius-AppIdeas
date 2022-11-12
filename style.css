@@ -1,7 +1,8 @@
 /* variables */
 
 :root {
-    --ff-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    --ff-primary: Arial, Helvetica, sans-serif;
     --clr-dark: #463F3A;
     --clr-light: #F4F3EE;
     --bg-secundary: #8A817C;
@@ -41,34 +42,70 @@ input:focus {
 
 /* main */
 .l-main {
-    width: 90%vw;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     text-align: center;
 }
 
-.app {
-    position: relative;
-    width: 100%;
-    
+.main-header {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    flex-direction: column;
+    height: 300px;
+    margin: 15px;
 
+    background-color: lightgrey;
+}
+.main-header h1{
+    padding: 0 0 25px 0;
+}
+
+.main-body {
+    height: 400px;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+    background-color: blueviolet;
+
+}
+.section-left { 
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    background-color: red;
+}
+
+.section-left > h3 {
+    width: 50%;
+}
+
+.section-right {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: aqua;
 }
 
 .square {
-   
-    width: 16rem;
-    height: 16rem;
-    margin: 0;
-    padding: 0;
+    width: 20rem;
+    height: 20rem;
+ 
     border: 5px solid #463F3A;
     background-color: #E0AFA0;
 
-    
-    position: absolute;
-    top: 11rem;
+    /* position: absolute;
+    top: 11rem; */
 }
 
 .border-r {
@@ -77,33 +114,26 @@ input:focus {
 }
 
 .__controles {
-    margin: 0;
-    padding: 0;
-    
     display: flex;
     align-items: center;
     justify-items: start;
+    flex-direction: column;
     gap: 0.5rem;
 
-    position: absolute;
-    top: 7rem;
-    
-
+    margin: 15px;
+    /* position: absolute;
+    top: 7rem; */
 }
 
 .range-top {
     display: inline-block;
     width: 16rem;
-    margin: 0;
-    padding: 0;
 
-    position: absolute;
-    top: 25.5rem;
-
+    /* position: absolute;
+    top: 25.5rem; */
 }
 
 .range-top input {
-    width: 100%;
     margin: 0;
     height: 0.7rem;
 
@@ -133,7 +163,6 @@ input:focus {
 
     background: #8A817C;
     cursor: pointer;
-
 }
 
 .__controle {
@@ -146,7 +175,6 @@ input:focus {
     align-items: center;
 
     border: 0.2rem solid #E0AFA0;
-    border-radius: 1rem;
 }
 
 span {
@@ -281,14 +309,6 @@ span::after{
     position: absolute;
     top: 30rem;
     font-weight: 700;
-}
-
-.primary-text {
-    width: 70%;
-    margin: 0;
-    margin-top: 2rem;
-    padding: 0;
-    text-align: center;
 }
 
 .primary-button {
