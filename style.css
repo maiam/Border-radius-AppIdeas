@@ -5,7 +5,8 @@
     --ff-primary: Arial, Helvetica, sans-serif;
     --clr-dark: #463F3A;
     --clr-light: #F4F3EE;
-    --bg-secundary: #8A817C;
+    --bg-primary: #fffffa;
+    --bg-secundary: black;
 }
 
 /* all */
@@ -19,7 +20,7 @@ body{
     color: var(--clr-dark);
     font-size: 16px;
     font-family: var(--ff-primary);
-    background-color: var(--clr-light);
+    background-color: var(--bg-primary);
 }
 
 input:focus {
@@ -55,7 +56,7 @@ input:focus {
     height: 300px;
     margin: 15px;
 
-    background-color: lightgrey;
+    background-color: rgba(211, 211, 211, 0.432);
 }
 .main-header h1{
     padding: 0 0 25px 0;
@@ -69,18 +70,19 @@ input:focus {
     align-items: center;
 
     overflow: hidden;
-    background-color: blueviolet;
-
 }
+
 .section-left { 
     width: 50vw;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
+    color: #F4F3EE;
     text-align: center;
-    background-color: red;
+    background-color: rgba(2, 2, 2, 0.9);
 }
 
 .section-left > h3 {
@@ -93,8 +95,6 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: aqua;
 }
 
 .square {
@@ -432,10 +432,7 @@ span::after{
 /* footer */
 .l-footer {
     width: 100%;
-    height: 4.375rem;
-    /* position: fixed;
-    bottom: 0; */
-
+    height: 70px;
     text-align: center;
     color: #F4F3EE;
 
@@ -443,6 +440,6 @@ span::after{
     align-items: center;
     justify-content: center;
 
-    background-color:  #463F3A;
+    background-color: var(--bg-secundary);
 }
 
